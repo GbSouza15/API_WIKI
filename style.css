@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #096efd;
+    --secondary-color: #ffffff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.logo {
+    font-size: 2rem;
+    margin-top: 5rem;
+    display: flex;
+
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    padding: 1rem;
+    color: var(--secondary-color);
+}
+
+.search {
+    margin-top: 2rem;
+}
+
+form {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+#camp-search {
+    border: 1px solid var(--primary-color);
+    border-radius: .2rem;
+    width: 20rem;
+    font-size: 1.5rem;
+}
+
+#btn-search {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: .2rem;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    padding: .2rem;
+}
+
+.card-result {
+    margin-top: 2rem;
+}
+
+.list-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    list-style: none;
+    margin-bottom: 4rem;
+}
+
+.list-card li {
+    width: 15rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
