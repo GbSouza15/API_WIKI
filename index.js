@@ -4,11 +4,14 @@ const btnSubmit = document.getElementById('btn-search')
 
 const cards = document.querySelector('.list-card')
 
-let srSearch;
-
 function createCards(response) {
+
+    if (response.length === 0) {
+        alert('Nenhum resultado encontrado!, tente novamente!')
+    }
+
     response.forEach(item => {
-        let createLi = document.createElement('li')
+        const createLi = document.createElement('li')
             createLi.innerHTML = `
                 <div class="card-header">
                     <h3>${item.title}</h3>
@@ -29,7 +32,7 @@ btnSubmit.addEventListener('click', (e) => {
 
     e.preventDefault()
 
-    srSearch = input.value
+    let srSearch = input.value
 
     const url = `https://en.wikipedia.org/w/api.php?origin=*&action=query&list=search&srsearch=${srSearch}&format=json`
 

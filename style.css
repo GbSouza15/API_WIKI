@@ -5,8 +5,13 @@
 }
 
 :root {
-    --primary-color: #096efd;
+    --primary-color: #32a5fe;
     --secondary-color: #ffffff;
+    --tertiary-color: #000000;
+}
+
+body {
+    background-color: var(--tertiary-color);
 }
 
 main {
@@ -44,6 +49,10 @@ form {
     font-size: 1.5rem;
 }
 
+#camp-search:focus {
+    outline: double 2px var(--primary-color);
+}
+
 #btn-search {
     background-color: var(--primary-color);
     border: none;
@@ -51,10 +60,21 @@ form {
     color: var(--secondary-color);
     font-size: 1.5rem;
     padding: .2rem;
+
+    transition: all .2s;
+}
+
+#btn-search:hover {
+    cursor: pointer;
+
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transform: scale(1.1);
+    transition: all .2s;
 }
 
 .card-result {
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 .list-card {
@@ -68,11 +88,18 @@ form {
 .list-card li {
     width: 15rem;
     border: 1px solid var(--primary-color);
-    border-radius: 0.5rem;
+    border-radius: .2rem;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
+
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.list-card li a {
+    color: var(--tertiary-color);
 }
