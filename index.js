@@ -7,12 +7,12 @@ const cards = document.querySelector('.list-card')
 function createCards(response) {
 
     if (response.length === 0) {
-        alert('Nenhum resultado encontrado!, tente novamente!')
+        alert('Nenhum resultado encontrado! Tente novamente!')
     }
 
-    response.forEach(item => {
+    response.map(item => {
         const createLi = document.createElement('li')
-            createLi.innerHTML = `
+        createLi.innerHTML = `
                 <div class="card-header">
                     <h3>${item.title}</h3>
                 </div>
@@ -23,9 +23,9 @@ function createCards(response) {
                     <a href="https://en.wikipedia.org/?curid=${item.pageid}" target="_blank">Leia mais...</a>
                 </div>
             `
-            cards.appendChild(createLi)
+        cards.appendChild(createLi)
     })
-}
+ }
 
 btnSubmit.addEventListener('click', (e) => {
     cards.innerHTML = ''
